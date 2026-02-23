@@ -172,7 +172,7 @@ with col_graf3:
         "#d81b60",  # rosa forte
         "#f06292"   # rosa médio vibrante
         ])
-        grafico_remoto.update_traces(textposition='inside',textinfo='percent+label',textfont=dict(color='white', size=14),marker=dict(line=dict(color='#ffffff', width=2)))
+        grafico_remoto.update_traces(textposition='inside',textinfo='percent+label',textfont=dict(color='black', size=14),marker=dict(line=dict(color='black', width=2)))
         grafico_remoto.update_layout(title_x=0.1,paper_bgcolor="#fff0f6")
         st.plotly_chart(grafico_remoto, use_container_width=True)
     else:
