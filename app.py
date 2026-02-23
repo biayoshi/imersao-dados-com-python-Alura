@@ -98,6 +98,7 @@ df_filtrado = df[
 st.title("🎲 Dashboard - Analisando Salários na Área de Dados")
 st.markdown("Explore os dados salariais na área de dados nos últimos anos! Utilize os filtros à esquerda para refinar a análise!")
 st.markdown("Importante: Lembre-se de deixar ao menos um filtro marcado por categoria!")
+t.markdown("Para melhor visualização, use o modo claro!")
 
 # Métricas Principais (KPIs)
 st.subheader("Métricas gerais/KPIs (Salário anual em USD)")
@@ -172,7 +173,7 @@ with col_graf3:
         "#d81b60",  # rosa forte
         "#f06292"   # rosa médio vibrante
         ])
-        grafico_remoto.update_traces(textposition='inside',textinfo='percent+label',textfont=dict(color='black', size=14),marker=dict(line=dict(color='black', width=2)))
+        grafico_remoto.update_traces(textposition='inside',textinfo='percent+label',textfont=dict(color='white', size=14),marker=dict(line=dict(color='#ffffff', width=2)))
         grafico_remoto.update_layout(title_x=0.1,paper_bgcolor="#fff0f6")
         st.plotly_chart(grafico_remoto, use_container_width=True)
     else:
@@ -240,6 +241,7 @@ with col_graf4:
 st.subheader("Dados Detalhados")
 
 st.dataframe(df_filtrado)
+
 
 
 
