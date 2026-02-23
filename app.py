@@ -26,12 +26,17 @@ st.markdown("""
 
         /* Títulos */
         h1, h2, h3 {
-            color: #ad1457;
+            color: #000000 !important;
         }
 
-        /* Texto padrão */
-        .stMarkdown, .stText {
-            color: #4a148c;
+        /* Texto padrão (parágrafos, markdown, labels etc.) */
+        .stMarkdown, 
+        .stText, 
+        p, 
+        span, 
+        label, 
+        div {
+            color: #000000 !important;
         }
 
         /* Botões */
@@ -53,6 +58,7 @@ st.markdown("""
             border: 1px solid #f48fb1;
             padding: 10px;
             border-radius: 10px;
+            color: #000000 !important;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -92,7 +98,6 @@ df_filtrado = df[
 st.title("🎲 Dashboard - Analisando Salários na Área de Dados")
 st.markdown("Explore os dados salariais na área de dados nos últimos anos! Utilize os filtros à esquerda para refinar a análise!")
 st.markdown("Importante: Lembre-se de deixar ao menos um filtro marcado por categoria!")
-st.markdown("Para uma melhor leitura, veja no modo claro!")
 
 # Métricas Principais (KPIs)
 st.subheader("Métricas gerais/KPIs (Salário anual em USD)")
@@ -235,5 +240,6 @@ with col_graf4:
 st.subheader("Dados Detalhados")
 
 st.dataframe(df_filtrado)
+
 
 
