@@ -98,7 +98,7 @@ df_filtrado = df[
 st.title("🎲 Dashboard - Analisando Salários na Área de Dados")
 st.markdown("Explore os dados salariais na área de dados nos últimos anos! Utilize os filtros à esquerda para refinar a análise!")
 st.markdown("Importante: Lembre-se de deixar ao menos um filtro marcado por categoria!")
-t.markdown("Para melhor visualização, use o modo claro!")
+st.markdown("Para melhor visualização, use o modo claro!")
 
 # Métricas Principais (KPIs)
 st.subheader("Métricas gerais/KPIs (Salário anual em USD)")
@@ -241,6 +241,7 @@ with col_graf4:
 st.subheader("Dados Detalhados")
 
 st.dataframe(df_filtrado)
+
 
 
 
